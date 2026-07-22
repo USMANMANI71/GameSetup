@@ -3,59 +3,127 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Game Admin Panel - Demo</title>
+    <title>444 Game - Official</title>
     <style>
         body {
             background-color: #0b2e21;
             color: #ffffff;
             font-family: Arial, sans-serif;
-            text-align: center;
             margin: 0;
-            padding: 20px;
+            padding: 0;
         }
         .header {
-            font-size: 24px;
+            background: #062319;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 20px;
             font-weight: bold;
-            margin-bottom: 20px;
             color: #2ecc71;
         }
-        .card {
-            background: #144632;
-            padding: 15px;
-            margin: 10px auto;
-            width: 90%;
-            max-w: 400px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-        }
-        .btn {
-            background-color: #27ae60;
+        .auth-btns button {
+            background: #27ae60;
             color: white;
-            padding: 10px 20px;
             border: none;
+            padding: 8px 15px;
             border-radius: 5px;
-            cursor: pointer;
             font-weight: bold;
-            text-decoration: none;
-            display: inline-block;
+            margin-left: 5px;
+        }
+        .categories {
+            display: flex;
+            overflow-x: auto;
+            padding: 10px;
+            background: #0f382a;
+        }
+        .cat-item {
+            background: #144632;
+            padding: 8px 15px;
+            margin-right: 8px;
+            border-radius: 20px;
+            font-size: 14px;
+            white-space: nowrap;
+            color: #2ecc71;
+            font-weight: bold;
+        }
+        .section-title {
+            padding: 15px 15px 5px 15px;
+            font-size: 18px;
+            color: #f1c40f;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            padding: 10px;
+        }
+        .game-card {
+            background: #144632;
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+        }
+        .game-card h3 {
+            margin: 10px 0 5px 0;
+            font-size: 16px;
+        }
+        .play-btn {
+            background: #27ae60;
+            color: white;
+            border: none;
+            padding: 6px 12px;
+            border-radius: 5px;
+            font-size: 12px;
             margin-top: 10px;
+            cursor: pointer;
         }
     </style>
 </head>
 <body>
 
-    <div class="header">🎮 Game Platform Demo</div>
-
-    <div class="card">
-        <h3>Aviator Game</h3>
-        <p>مایاں اور کریش گیم کا مزہ لیں</p>
-        <a href="#" class="btn">Play Now</a>
+    <div class="header">
+        <div class="logo">🎮 444.GAME</div>
+        <div class="auth-btns">
+            <button>Login</button>
+            <button style="background: #f1c40f; color: #000;">Register</>
+        </div>
     </div>
 
-    <div class="card">
-        <h3>Admin Control Panel</h3>
-        <p>یوزرز اور ون/لاس کنٹرول کرنے کے لیے</p>
-        <a href="admin.html" class="btn" style="background-color: #e67e22;">Admin Login</a>
+    <div class="categories">
+        <div class="cat-item">🔥 Hot</div>
+        <div class="cat-item">🎰 Slot</div>
+        <div class="cat-item">🚀 Aviator</div>
+        <div class="cat-item">🃏 Cards</div>
+        <div class="cat-item">🎣 Fishing</div>
+    </div>
+
+    <div class="section-title">🔥 Hot Games</div>
+
+    <div class="grid">
+        <div class="game-card">
+            <h3>Aviator</h3>
+            <p style="font-size: 11px; color: #aaa;">کرش گیم</p>
+            <button class="play-btn" onclick="alert('Game Loading...')">Play Now</button>
+        </div>
+        <div class="game-card">
+            <h3>Chicken Road</h3>
+            <p style="font-size: 11px; color: #aaa;">مشہور جیدی گیم</p>
+            <button class="play-btn" onclick="alert('Game Loading...')">Play Now</button>
+        </div>
+        <div class="game-card">
+            <h3>Fortune Gems 3</h3>
+            <p style="font-size: 11px; color: #aaa;">JILI Slot</p>
+            <button class="play-btn" onclick="alert('Game Loading...')">Play Now</button>
+        </div>
+        <div class="game-card">
+            <h3>Money Coming</h3>
+            <p style="font-size: 11px; color: #aaa;">JILI Slot</p>
+            <button class="play-btn" onclick="alert('Game Loading...')">Play Now</button>
+        </div>
     </div>
 
 </body>
