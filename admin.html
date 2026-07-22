@@ -3,58 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Dashboard</title>
+    <title>Admin Portal</title>
     <style>
         body {
             background-color: #1a1a1a;
             color: #fff;
             font-family: Arial, sans-serif;
-            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .login-box, .panel {
+            background: #2c2c2c;
+            padding: 25px;
+            border-radius: 8px;
+            width: 300px;
             text-align: center;
         }
-        .panel {
-            background: #2c2c2c;
-            padding: 20px;
-            border-radius: 8px;
-            max-width: 400px;
-            margin: auto;
-        }
-        select, button {
+        input, select, button {
             width: 100%;
             padding: 10px;
-            margin-top: 10px;
+            margin-top: 12px;
             border-radius: 5px;
             border: none;
+            box-sizing: border-box;
         }
         button {
-            background-color: #e74c3c;
+            background-color: #27ae60;
             color: white;
             font-weight: bold;
+            cursor: pointer;
+        }
+        .panel {
+            display: none;
         }
     </style>
 </head>
 <body>
 
-    <div class="panel">
-        <h2>🔒 Admin Control Dashboard</h2>
-        <p>گیم رزلٹ کنٹرول پینل</p>
-        
-        <label>یوزر کا انتخاب کریں:</label>
-        <select>
-            <option>User_123 (Balance: 500)</option>
-            <option>User_99 (Balance: 1200)</option>
-        </select>
-
-        <label>رزلٹ سیٹ کریں:</label>
-        <select id="control">
-            <option value="win">زبردستی جتوانا (Win)</option>
-            <option value="loss">ہرانا (Loss)</option>
-            <option value="random">رینڈم (Normal)</option>
-        </select>
-
-        <button onclick="alert('Settings Updated!')">سیٹنگز محفوظ کریں</button>
+    <!-- لاگ ان باکس -->
+    <div class="login-box" id="loginBox">
+        <h3>🔐 Admin Login</h3>
+        <input type="password" id="passInput" placeholder="پاس ورڈ درج کریں">
+        <button onclick="checkPassword()">لاگ ان کریں</button>
     </div>
+
+    <!-- اصلی ایڈمن ڈیش بورڈ -->
+    <div class="panel" id="adminPanel">
+        <h2>⚡ Control Dashboard</h2>
+        <label>یوزر سلیکٹ کریں:</label>
+        <select>
+            <option>Usman (Balance: 5000)</option>
+            <option>Player_99 (Balance: 200)</option>
+        </select>
+
+        <label>کنٹرول موڈ:</label>
+        <select>
+            <option>زبردستی ون کروائیں (Win)</option>
+            <option>ہرائیں (Loss)</option>
+            <option>نارمل رینڈم (Normal)</option>
+        </select>
+
+        <button style="background: #e74c3c;" onclick="alert('Saved Successfully!')">اپڈیٹ کریں</button>
+    </div>
+
+<script>
+    function checkPassword() {
+        var pass = document.getElementById("passInput").value;
+        // یہاں اپنا مرضی کا پاس ورڈ رکھ سکتے ہو، فی الحال 'admin123' ہے
+        if(pass === "admin123") {
+            document.getElementById("loginBox").style.display = "none";
+            document.getElementById("adminPanel").style.display = "block";
+        } else {
+            alert("غلط پاس ورڈ!");
+        }
+    }
+</script>
 
 </body>
 </html>
-
