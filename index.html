@@ -10,7 +10,7 @@
             color: #ffffff;
             font-family: Arial, sans-serif;
             margin: 0;
-            padding-bottom: 70px; /* نیچے کے بار کے لیے جگہ */
+            padding-bottom: 70px;
         }
         .header {
             background: #062319;
@@ -74,31 +74,32 @@
             padding: 0 10px;
         }
         .game-card {
-            background: linear-gradient(145deg, #144632, #0d3223);
+            background: #144632;
             border-radius: 10px;
-            padding: 10px;
+            padding: 8px;
             text-align: center;
             border: 1px solid #1e563f;
-            position: relative;
         }
-        .game-card img {
+        .game-banner {
             width: 100%;
-            height: 70px;
-            object-fit: cover;
+            height: 85px;
             border-radius: 6px;
-            background: #222;
+            object-fit: cover;
+            background: #000;
         }
         .game-card h4 {
             margin: 6px 0 2px 0;
-            font-size: 12px;
+            font-size: 11px;
             color: #fff;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
         .game-card p {
             margin: 0;
             font-size: 9px;
             color: #2ecc71;
         }
-        /* نیچے کا نیویگیشن بار */
         .bottom-nav {
             position: fixed;
             bottom: 0;
@@ -147,39 +148,44 @@
     <div class="section-title">🔥 Hot Games</div>
 
     <div class="grid">
-        <div class="game-card">
-            <div style="height:70px; background:#c0392b; border-radius:6px; display:flex; align-items:center; justify-content:center; font-weight:bold; font-size:12px;">AVIATOR</div>
+        <!-- Aviator -->
+        <div class="game-card" onclick="alert('Opening Aviator Game...')">
+            <img src="https://images.unsplash.com/photo-1541185933-ef5d8ed016c2?w=300" class="game-banner" alt="Aviator">
             <h4>Aviator</h4>
-            <p>Scribe</p>
+            <p>Spribe</p>
         </div>
-        <div class="game-card">
-            <div style="height:70px; background:#d35400; border-radius:6px; display:flex; align-items:center; justify-content:center; font-weight:bold; font-size:11px;">CHICKEN</div>
+        <!-- Chicken Road -->
+        <div class="game-card" onclick="alert('Opening Chicken Road...')">
+            <img src="https://images.unsplash.com/photo-1533738363-b7f9aef128ce?w=300" class="game-banner" alt="Chicken">
             <h4>Chicken Road</h4>
             <p>Mini Game</p>
         </div>
-        <div class="game-card">
-            <div style="height:70px; background:#f39c12; border-radius:6px; display:flex; align-items:center; justify-content:center; font-weight:bold; font-size:11px;">FORTUNE</div>
+        <!-- Fortune Gems -->
+        <div class="game-card" onclick="alert('Opening Fortune Gems...')">
+            <img src="https://images.unsplash.com/photo-1518609878373-06d740f60d8b?w=300" class="game-banner" alt="Fortune">
             <h4>Fortune Gems</h4>
             <p>JILI Slot</p>
         </div>
-        <div class="game-card">
-            <div style="height:70px; background:#27ae60; border-radius:6px; display:flex; align-items:center; justify-content:center; font-weight:bold; font-size:11px;">MONEY</div>
+        <!-- Money Coming -->
+        <div class="game-card" onclick="alert('Opening Money Coming...')">
+            <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=300" class="game-banner" alt="Money">
             <h4>Money Coming</h4>
             <p>JILI Slot</p>
         </div>
-        <div class="game-card">
-            <div style="height:70px; background:#8e44ad; border-radius:6px; display:flex; align-items:center; justify-content:center; font-weight:bold; font-size:11px;">PIGGY</div>
+        <!-- Piggy Bank -->
+        <div class="game-card" onclick="alert('Opening Piggy Bank...')">
+            <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?w=300" class="game-banner" alt="Piggy">
             <h4>Piggy Bank</h4>
             <p>Slot Game</p>
         </div>
-        <div class="game-card">
-            <div style="height:70px; background:#2980b9; border-radius:6px; display:flex; align-items:center; justify-content:center; font-weight:bold; font-size:11px;">SEVEN</div>
+        <!-- Super Slot -->
+        <div class="game-card" onclick="alert('Opening Super Slot...')">
+            <img src="https://images.unsplash.com/photo-1596838132731-3301c3fd4317?w=300" class="game-banner" alt="Slot">
             <h4>Super Slot</h4>
             <p>JILI Slot</p>
         </div>
     </div>
 
-    <!-- نیچے کا پروفیشنل نیویگیشن بار -->
     <div class="bottom-nav">
         <a href="#" class="nav-item active"><span>🔍</span>Browse</a>
         <a href="#" class="nav-item"><span>🎰</span>Casino</a>
